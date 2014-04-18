@@ -1,0 +1,43 @@
+{
+  "name": "rapt-modelrizerly-mongodb-example",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "Jamie Pitts <james.pitts@gmail.com>",
+  "description": "Modelrizerly mongodb example web app.",
+  "contributors": [
+    {
+      "name": "Jamie Pitts",
+      "email": "james.pitts@gmail.com"
+    }
+  ],
+  "bin": {
+  },
+  "scripts": {
+  },
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpitts/rapt-modelrizerly.git"
+  },
+  "keywords": [
+    "clock",
+    "precision time",
+    "websockets"
+  ],
+  "dependencies" : {
+    "express": "3.4.x",
+    "express-partials": "0.1.x",
+    "ejs": "0.8.x",
+    "winston": "0.7.x"
+  },
+  "analyze": false,
+  "devDependencies": {
+    "mocha": "1.16.x"
+  },
+  "bundledDependencies": [
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

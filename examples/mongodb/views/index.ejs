@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+<h1>Welcome to the <%= title %>!</h1>
+
+<div style="padding:10px">
+<form id="create-lyric-form">
+  
+  <label for="title">Title</label><br/>
+  <input type="text" name="title"/><br/>
+  
+  <label for="author">Author</label><br/>
+  <input type="text" name="author"/><br/>
+  
+  <label for="words">Words</label><br/>
+  <textarea name="words" cols="50" rows="4"></textarea><br/>
+    
+  <input type="button" value="Create" onclick="createLyric({
+    title: jQuery('#create-lyric-form input[name=title]').val(),
+    author: jQuery('#create-lyric-form input[name=author]').val(),
+    words: jQuery('#create-lyric-form textarea[name=words]').val(),
+  }, function (err, msg) {
+    if (err) { return console.error(err); }
+    console.log('Created ' + msg.lyric_id);
+    window.location = '/lounge';
+  });"/>
+
+</form>
+</div>
+
+<script>
+function createLyric (attr, cb) {
+  jQuery.ajax({
+    url: "/api/lyric",
+    context: document.body,
+    type: 'POST',
+    dataType: 'json',
+    data: attr,
+    success: function(msg){
+      if (typeof msg.error !== 'undefined') { console.error(msg.error); }
+      cb(null, msg);
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      console.error(thrownError);
+      cb(thrownError, undefined);
+    }
+  });
+
+}
+</script>
+
+<h2>Lyrics</h2>
+<table cellpadding="5" cellspacing="0">
+  <tr style="background-color:#eee"><td>Title</td><td>Author</td><td>Words</td></tr>
+  <% if (lyrics && lyrics.length) { %>
+    <% for (var i=0; i<lyrics.length; i++) { %>
+    <tr>
+      <td valign="top"><%= lyrics[i].title %></td>
+      <td valign="top"><%= lyrics[i].author %></td>
+      <td valign="top"><%= lyrics[i].words %></td>
+    </tr>
+    <% } %>
+
+  <% } else { %>
+    <tr><td width="100%">No lyrics added yet.</td></tr>
+  <% } %>
+</table>
+
+</body>
+</html>
