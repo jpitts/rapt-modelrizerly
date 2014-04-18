@@ -20,9 +20,8 @@
     "url": "https://github.com/jpitts/rapt-modelrizerly.git"
   },
   "keywords": [
-    "clock",
-    "precision time",
-    "websockets"
+    "mongodb",
+    "redis"
   ],
   "dependencies" : {
     "mongodb": "1.3.5",

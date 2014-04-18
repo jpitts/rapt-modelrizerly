@@ -22,12 +22,16 @@ npm install rapt-modelrizerly
 
 ### Initializing Modelrizerly
 
-First, an application context must be defined:
+First, an application context must be defined. It contains a winston logger instance and configuration data:
 
 ```js
 
+
+var Winston = require('winston'),
+    logger = new (Winston.Logger) ({ });
+
 var app_context = {
-  logger: new (Winston.Logger) ({ }),
+  logger: logger,
   log: function (message, attr) {
     logger.log(attr.level, message, attr);
   },
