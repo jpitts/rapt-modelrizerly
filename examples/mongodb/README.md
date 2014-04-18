@@ -16,7 +16,7 @@ Modify as needed.
     
   NODE_ENV=dev node app.js
 
-  curl http://localhost:8080/lyrics
+  curl http://localhost:8080/
 
   curl http://localhost:8080/api/lyrics
 

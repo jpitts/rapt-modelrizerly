@@ -86,7 +86,7 @@ app.use(Express.static(__dirname + '/public'));
 
 // lyrics home
 
-app.get('/lounge', function(req, res){
+app.get('/', function(req, res){
 
   var query = {};
   var query_options = {};
