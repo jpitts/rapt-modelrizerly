@@ -35,6 +35,7 @@ try {
 }
 
 var logger = new (Winston.Logger) ({ });
+logger.add(Winston.transports.Console);
 
 var app_context = {
   logger: logger,

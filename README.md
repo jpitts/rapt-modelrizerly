@@ -4,7 +4,7 @@ A basic object modelling framework for mongodb and redis.
 
 # Status
 
-This software is actively under development and is not yet ready for release!
+This software is actively under development and should not yet be used in production environments!
 
 ## Contributors
 
