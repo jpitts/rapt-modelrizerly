@@ -1,6 +1,6 @@
 # Modelrizerly
 
-A basic object modelling framework for mongodb and redis.
+An object-modeling framework for mongodb and redis.
 
 # Status
 
