@@ -104,7 +104,7 @@ Query with [mongodb operators](http://docs.mongodb.org/manual/reference/operator
 var query = { created_at: { $gt: since_epoch } };
 var query_options = { sort: {title: 1} };
 
-Models.Lyric(query, query_options, function(err, lyrics) {
+Models.Lyric().find(query, query_options, function(err, lyrics) {
   for (var i=0; i<lyrics.length; i++) {
     console.log(lyrics[i].title);
   }

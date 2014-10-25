@@ -1,7 +1,7 @@
 {
   "name": "rapt-modelrizerly",
   "preferGlobal": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jamie Pitts <james.pitts@gmail.com>",
   "description": "Modelrizerly mongodb example web app.",
   "contributors": [
