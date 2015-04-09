@@ -1,7 +1,7 @@
 {
   "name": "rapt-modelrizerly",
   "preferGlobal": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Jamie Pitts <james.pitts@gmail.com>",
   "description": "Object-modeling framework for mongodb and redis.",
   "contributors": [
